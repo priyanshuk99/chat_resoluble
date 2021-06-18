@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Chat App</title>
+</head>
+<body>
+    <h1 class="title">Let's Chat 💬</h1>
+    <div class="main">
+        <div class="name">
+            <span><i class="far fa-user"></i></span>
+            <input type="text" class="name-input" name="name-input" id="name-input" value="Anonymous" maxlength="20">
+        </div>
+
+        <ul class="message-container" id="message-container">
+            <li class="message-feedback">
+                <p class="feedback" id="feedback">
+                </p>
+            </li>
+        </ul>
+
+        <form class="message-form" id="message-form">
+            <input type="text" name="message" id="message-input" class="message-input" autocomplete="off" autofocus>
+            <div class="v-divider"></div>
+            <button type="submit" class="send-button">
+                send <span><i class="fas fa-paper-plane"></i></span>
+            </button>
+        </form>
+    </div>
+    <h3 class="clients-total" id="clients-total">Total clients : 2</h3>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
